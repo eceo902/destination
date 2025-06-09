@@ -41,11 +41,11 @@ jobs:
 
           # --- Define Source and Target Paths ---
           # Example 1: Copy a single file
-          SOURCE_FILE="dashboard/dashboard-public/dashboard-public.html" # <-- CHANGE THIS path
+          SOURCE_FILE="source-repo/dashboard/dashboard-public/dashboard-public.html" # <-- CHANGE THIS path
           DEST_FILE_DIR="destination-repo/paste/" # <-- CHANGE THIS path (ensure trailing slash)
 
           # Example 2: Copy an entire directory
-          SOURCE_FOLDER="dashboard/dashboard-public/dashboard-public_files/" # (ensure trailing slash)
+          SOURCE_FOLDER="source-repo/dashboard/dashboard-public/dashboard-public_files/" # (ensure trailing slash)
           DEST_FOLDER_PARENT="destination-repo/paste/" # (ensure trailing slash)
 
           # --- Execute Copy Operations ---
