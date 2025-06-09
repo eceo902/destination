@@ -1,0 +1,86 @@
+name: Sync Bio Benchmarks Dashboard Files
+
+# Controls when the workflow will run
+on:
+  # Schedule: Runs automatically (uses UTC time)
+  # Example: Runs daily at 3:15 AM UTC
+  schedule:
+    - cron: '15 3 * * *'
+
+  # Allows manual triggering from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  sync:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the source repository
+      - name: Checkout Source Repo
+        uses: actions/checkout@v4 # Use the official checkout action
+        with:
+          repository: SecureBio-ai/bio-benchmarks-dashboard # Source repo path
+          # Use the PAT stored in secrets to access the source repo
+          token: ${{ secrets.BIO_BENCHMARKS_PAT }}
+          path: source-repo # Checkout into a specific directory named 'source-repo'
+
+      # Step 2: Checkout the destination repository (this repository)
+      - name: Checkout Destination Repo (Self)
+        uses: actions/checkout@v4 # Use it again to checkout the current repo
+        with:
+          path: destination-repo # Checkout into a directory named 'destination-repo'
+          # The default GITHUB_TOKEN is usually sufficient for write access
+          # to the repo where the workflow is running. You only need a specific
+          # PAT here if you encounter permission issues pushing changes.
+
+      # Step 3: Copy the desired files
+      - name: Copy Files
+        run: |
+          echo "Starting file copy process..."
+
+          # --- Define Source and Target Paths ---
+          # Example 1: Copy a single file
+          SOURCE_FILE="dashboard/dashboard-public/dashboard-public.html" # <-- CHANGE THIS path
+          DEST_FILE_DIR="destination-repo/paste/" # <-- CHANGE THIS path (ensure trailing slash)
+
+          # Example 2: Copy an entire directory
+          SOURCE_FOLDER="dashboard/dashboard-public/dashboard-public_files/" # (ensure trailing slash)
+          DEST_FOLDER_PARENT="destination-repo/paste/" # (ensure trailing slash)
+
+          # --- Execute Copy Operations ---
+          # Example 1: Copy a single file
+          echo "Copying $SOURCE_FILE to $DEST_FILE_DIR"
+          # Create the target directory if it doesn't exist (-p prevents errors if it exists)
+          mkdir -p "$DEST_FILE_DIR"
+          # Copy the file (use -v for verbose output if desired)
+          cp "$SOURCE_FILE" "$DEST_FILE_DIR"
+
+          # Example 2: Copy an entire directory
+          echo "Copying folder $SOURCE_FOLDER to $DEST_FOLDER_PARENT"
+          # Create the parent directory for the target folder if it doesn't exist
+          mkdir -p "$DEST_FOLDER_PARENT"
+          # Copy the entire directory recursively (-r)
+          cp -r "$SOURCE_FOLDER" "$DEST_FOLDER_PARENT"
+
+          echo "File copy process finished."
+
+      # Step 4: Commit and Push Changes to Destination Repo
+      - name: Commit and Push Changes
+        run: |
+          cd destination-repo # Navigate into the checked-out destination repo directory
+          git config --global user.name 'GitHub Action Bot'
+          git config --global user.email 'github-actions-bot@users.noreply.github.com' # Recommended email
+
+          # Check if there are any changes to commit
+          if [[ -z $(git status --porcelain) ]]; then
+            echo "No changes detected in destination repo. Nothing to commit."
+          else
+            echo "Changes detected. Committing and pushing..."
+            git add . # Stage all changes (copied files, new directories)
+            git commit -m "Auto-sync: Update files from source repository" -m "Synced on $(date)"
+            git push
+            echo "Changes pushed successfully."
+          fi
+        # The default GITHUB_TOKEN provided by Actions has write permission to its own repo
+        # You generally do NOT need a separate PAT for this push step.
