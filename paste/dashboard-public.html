@@ -12,7 +12,7 @@
 <meta name="author" content="Evan Seeyave">
 <meta name="author" content="Tina Wünn">
 <meta name="author" content="Seth Donoughe">
-<meta name="dcterms.date" content="2025-06-12">
+<meta name="dcterms.date" content="2025-06-17">
 
 <title>Biology Benchmarks Dashboard</title>
 <style>
@@ -155,7 +155,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 12, 2025</p>
+      <p class="date">June 17, 2025</p>
     </div>
   </div>
   
@@ -1608,8 +1608,8 @@ WIP-only! Model-Benchmark Matrix
 <p>Anthropic evaluates their models extensively in regards to CBRN, specifically on how their models may help groups create and deploy CBRN weapons. Within CBRN, they focus most on biological risks.</p>
 <section id="claude-3.7-sonnet" class="level3">
 <h3 class="anchored" data-anchor-id="claude-3.7-sonnet"><a href="https://assets.anthropic.com/m/785e231869ea8b3b/original/claude-3-7-sonnet-system-card.pdf">Claude 3.7 Sonnet</a></h3>
-<p>The evaluations run include automated knowledge evaluations, automated skill-testing questions, uplift studies designed to proxy real world tasks, external red teaming by experts, and long-form task-based agentic evaluations. Notably, the evaluations are not only about eliciting knowledge but also about assisting the user with advanced, multistep tasks. They also noticed that the model is starting to meet, or exceed, human performance in a number of automated evaluations that test biological knowledge and biology-relevant skills. They observed that Claude 3.7 Sonnet provides better advice in key steps of the weaponization pathway, makes fewer mistakes in critical steps, can sustain longer interactions with users for end-to-end tasks, and ultimately make solving complex problems faster. However, when observing end-to-end task success rates holistically, we find that Claude 3.7 Sonnet still makes several critical errors. Notably, in our uplift trials, no participant—even in the model-assisted group—came up with a convincing plan without critical failures. As a result, the total amount of uplift Claude 3.7 Sonnet can provide in a given task is still limited.</p>
-<p>There were six overall biorisk evaluations run:</p>
+<p>The evaluations run include automated knowledge evaluations, automated skill-testing questions, uplift studies designed to proxy real world tasks, external red teaming by experts, and long-form task-based agentic evaluations. Notably, the evaluations are not only about eliciting knowledge but also about assisting the user with advanced, multistep tasks. They also noticed that the model is starting to meet, or exceed, human performance in a number of automated evaluations that test biological knowledge and biology-relevant skills. They observed that Claude 3.7 Sonnet provides better advice in key steps of the weaponization pathway, makes fewer mistakes in critical steps, can sustain longer interactions with users for end-to-end tasks, and ultimately make solving complex problems faster. However, when observing end-to-end task success rates holistically, they found that Claude 3.7 Sonnet still makes several critical errors. Notably, in their uplift trials, no participant—even in the model-assisted group—came up with a convincing plan without critical failures. As a result, they concluded that the total amount of uplift Claude 3.7 Sonnet can provide in a given task is still limited.</p>
+<p>Anthropic ran the following evaluations:</p>
 <ol type="1">
 <li><p><strong>Bioweapons Acquisition Uplift Trial</strong> – Do models uplift humans in making a detailed end-to-end plan for how to acquire a biological weapon?</p>
 <p>Novices were given 12 hours across two days to draft a comprehensive acquisition plan. Altogether, the within-group uplift is ∼2.1X.</p></li>
@@ -1624,8 +1624,8 @@ WIP-only! Model-Benchmark Matrix
 <p>Experts from Deloitte probed various scenarios over three days of testing. Red-teaming results suggest that models do not have capabilities warranting ASL-3 protections. In particular, although Deloitte staff found that the Claude 3.7 Sonnet was sometimes more capable than Claude 3.5 Sonnet (new) in providing accurate and relevant information, Claude 3.7 Sonnet still made critical errors that would have prevented real-world success.</p></li>
 <li><p><strong>Long-form Virology Tasks</strong> – Can agentic systems complete a series of tasks that approximate a full viral acquisition pathway?</p>
 <p>This evaluation was developed with SecureBio and Deloitte, testing end-to-end completion of a complex pathogen acquisition process. There were two main components: workflow design and laboratory protocols, that measure the model’s ability to complete a realistic task that requires both specific knowledge and biological design skills. Sonnet 3.7 achieved a score of 69.7%.</p></li>
-<li><p><strong>Multimodal Virology (VCT)</strong> – How well do models perform on questions about virology that include images?</p>
-<p>The dataset consists of virology-specific “Select all” style questions with images. Human experts show strong performance only within their specific subdomain of expertise, while the model displays broader expertise. Both models Claude 3.7 Sonnet and Claude 3.5 Sonnet (new) have surpassed the human baseline.</p></li>
+<li><p><strong>Multimodal Virology (VCT)</strong> – How well do models perform on multimodal questions about virology experiments?</p>
+<p>See above for a description of the VCT benchmark. Both models Claude 3.7 Sonnet and Claude 3.5 Sonnet (new) have surpassed the human baseline.</p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1642,7 +1642,7 @@ WIP-only! Model-Benchmark Matrix
 </figure>
 </div>
 <ol start="6" type="1">
-<li><p><strong>LabBench Subset</strong> – How well do models perform on questions about skills relevant to wet-lab research?</p>
+<li><p><strong>LAB-Bench Subset</strong> – How well do models perform on questions about skills relevant to wet-lab research?</p>
 <p>Four separate tasks developed by FutureHouse for evaluating expert-level biological skill. Anthropic considers this benchmark saturated for the purposes of ASL determination and no longer considers it a valid rule-out evaluation.</p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
@@ -1656,7 +1656,7 @@ WIP-only! Model-Benchmark Matrix
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <section id="r1" class="level3">
 <h3 class="anchored" data-anchor-id="r1"><a href="https://github.com/deepseek-ai/DeepSeek-R1">R1</a></h3>
-<p>On DeepSeek’s summary page, the team makes no mention of CBRN or misuse. The biology-related benchmarks run are GPQA Diamond and MMLU.</p>
+<p>On DeepSeek’s summary page, the team makes no mention of CBRN or misuse. They do not evaluate their model on biosecurity evals; the only biology-related benchmarks run are GPQA Diamond and MMLU.</p>
 </section>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
@@ -1702,100 +1702,86 @@ WIP-only! Model-Benchmark Matrix
 </section>
 </div>
 <div id="tabset-2-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-6-tab">
-<p>OpenAI recognizes and addresses CBRN threats and misuse cases. They address the risks on their model cards, and they have also conducted standalone research on AI and biological threats (<a href="https://openai.com/index/building-an-early-warning-system-for-llm-aided-biological-threat-creation/">Link</a>). OpenAI also shares evaluations on both their pre-mitigation models and post-mitigation models. They note that eval results represent lower bounds on model capabilities since additional scaffolding or improved elicitation could increase performance.</p>
-<section id="o3-and-o4-mini" class="level3">
-<h3 class="anchored" data-anchor-id="o3-and-o4-mini"><a href="https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf">o3 and o4-mini</a></h3>
-<p>OpenAI found that o3 and o4-mini can help experts with the operational planning of reproducing a known biological threat. OpenAI believes that their biology evaluations indicate models are close to being able to help novices create known biological threats, crossing the high risk threshold defined in the Preparedness Framework. OpenAI focuses more on biological risks than chemical risks.</p>
-<p>4 different chemical/biological evaluations were run on o3 and o4-mini. For information on the evaluations themselves, look at the section below on the o1 model:</p>
-<ol type="1">
-<li>Long-form Biological Risk Questions<br>
-<img src="dashboard-public_files/embedded_images/o3_o4mini_biothreat_long-form.png" class="img-fluid"><br>
-The helpful-only models (internal testing model that is trained to respond to prompts even if they are unsafe) seem to be able to synthesize biorisk-related information across all 5 steps of the biothreat creation process.<br>
-</li>
-<li>Multimodal Troubleshooting Virology<br>
-<img src="dashboard-public_files/embedded_images/o3_o4mini_VCT.png" class="img-fluid"><br>
-Models were evaluated in the single select multiple choice setting; all models perform above the average human baseline of 40%.<br>
-</li>
-<li>ProtocolQA Open-Ended<br>
-<img src="dashboard-public_files/embedded_images/o3_o4mini_ProtocolQA.png" class="img-fluid"><br>
-All o3 and o4-mini models underperform the consensus expert baseline of 54%. O3 browsing helpful-only is the only model that outperforms the median expert baseline of 42%. OpenAI believes that there might be a risk of benchmark contamination.<br>
-</li>
-<li>Tacit Knowledge and Troubleshooting<br>
-<img src="dashboard-public_files/embedded_images/o3_o4mini_biorisk_tacit.png" class="img-fluid"><br>
-No model outperforms the consensus expert baseline of 80%. All models shown except for o3-mini outperform the 80th percentile PhD expert baseline of 63%.</li>
-</ol>
-</section>
+<p>OpenAI recognizes and addresses CBRN threats and misuse cases. They address the risks on their model cards, and they have also conducted <a href="https://openai.com/index/building-an-early-warning-system-for-llm-aided-biological-threat-creation/">standalone research on AI and biological threats</a>. OpenAI also shares evaluations on both their pre-mitigation models and post-mitigation models. They note that eval results represent lower bounds on model capabilities since additional scaffolding, fine-tuning, or improved elicitation could increase performance.</p>
 <section id="o1" class="level3">
 <h3 class="anchored" data-anchor-id="o1"><a href="https://cdn.openai.com/o1-system-card-20241205.pdf">o1</a></h3>
-<p>The model card links a Preparedness Framework (<a href="https://cdn.openai.com/openai-preparedness-framework-beta.pdf">Link</a>), a document that tracks and evaluates catastrophic risks, such as CBRN risks, from frontier models. o1 was evaluated according to this framework and received a “Medium” risk rating for CBRN. They do recognize that these evaluations are a lower bound for potential risks, as prompting, fine-tuning, scaffolding, longer usage time, and other interactions in the real world could increase risk. OpenAI also talks about their mitigations on o1 to decrease the CBRN risks. Such mitigations include filtering harmful training data, teaching the model to better adhere to safety policies, and implementing better monitoring. OpenAI claims that o1 can help experts with the planning of reproducing known biological threats but does not help non-experts because the models cannot yet replace necessary hands-on lab skills.</p>
-<p>10 different chemical/biological evaluations were run on o1:</p>
+<p>The model card links a <a href="https://cdn.openai.com/openai-preparedness-framework-beta.pdf">Preparedness Framework</a>, a document that tracks and evaluates catastrophic risks, such as CBRN risks, from frontier models. o1 was evaluated according to this framework and received a “Medium” risk rating for CBRN. OpenAI also talks about their mitigations on o1 to decrease the CBRN risks. Such mitigations include filtering harmful training data, teaching the model to better adhere to safety policies, and implementing better monitoring. OpenAI claims that o1 can help experts with the planning of reproducing known biological threats but does not help non-experts because the models cannot yet replace necessary hands-on lab skills.</p>
+<p>Ten different chemical/biological evaluations were run on o1:</p>
 <ol type="1">
 <li><p><strong>Long-form Biological Risk Questions</strong><br>
-OpenAI worked with Gryphon Scientific to test o1’s ability to acquire critical and sensitive information across five stages of the biological threat creation process: ideation, acquisition, magnification, formulation, and release. They used o1-preview as an autograder. Here is a chart of the results:</p>
+</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="dashboard-public_files/embedded_images/o1_biothreat_long-form.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
-<p>All o1 variants (all of which are pre-mitigation) performed well (and better than 4o) on the acquisition, magnification, formulation, and release stages, but performed poorly on the ideation stage.</p></li>
+<p>OpenAI worked with Gryphon Scientific to test o1’s ability to acquire critical and sensitive information across five stages of the biological threat creation process: ideation, acquisition, magnification, formulation, and release. They used o1-preview as an autograder.</p>
+<p>All o1 variants (all of which are pre-mitigation) performed well (and better than GPT-4o) on the acquisition, magnification, formulation, and release stages, but performed poorly on the ideation stage.</p></li>
 <li><p><strong>Expert comparisons</strong><br>
-46 Expert PhDs evaluated the model responses from the “Long-form Biological Risk Questions” against verified human expert responses on three criteria: which response more accurately addresses the question, which answer is easier to understand, and which strategy is easier to execute. There were thousands of comparisons across 4o and the o1 variants (all pre-mitigation), and each expert answer (had internet access) was randomly selected from the top three scoring expert responses. Here are the results:</p>
+</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="dashboard-public_files/embedded_images/o1_expert.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
-<p>4o narrowly outperforms the human expert baseline, while all o1 variants decisively outperform the experts.</p></li>
+<p>46 expert PhDs with internet access evaluated the model responses from the “Long-form Biological Risk Questions” against verified human expert responses on three criteria: which response more accurately addresses the question, which answer is easier to understand, and which strategy is easier to execute. There were thousands of comparisons across GPT-4o and the o1 variants (all pre-mitigation), and each expert answer was randomly selected from the top three scoring expert responses.</p>
+<p>GPT-4o narrowly outperforms the human expert baseline, while all o1 variants decisively outperform the experts.</p></li>
 <li><p><strong>Expert Probing</strong><br>
 In a more qualitative evaluation, over the course of a week six human biology experts with access to o1 answered questions from the “Long-form Biological Risk Questions.” All six experts found o1 to be significantly useful beyond access to the internet.</p></li>
-<li><p><strong>Biological tooling</strong><br>
-AI agents were tasked with automating wet lab work that human lab assistants would typically be tasked with. OpenAI collaborated with Ranger, a QA testing company, to create scaffolding that would allow the AI models to perform actions on the web. Here are the results:</p>
+<li><p><strong>Biological Tooling</strong><br>
+</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="dashboard-public_files/embedded_images/o1_biotool.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
+<p>AI agents were tasked with automating wet lab work that human lab assistants would typically be tasked with. OpenAI collaborated with Ranger, a QA testing company, to create scaffolding that would allow the AI models to perform actions on the web.</p>
 <p>OpenAI concludes that the models cannot yet automate biological agentic tasks.</p></li>
-<li><p><strong>Multimodal Troubleshooting Virology</strong><br>
-The models are evaluated on a set of 350 questions from SecureBio about troubleshooting wet lab experiments.</p>
+<li><p><strong>Multimodal Troubleshooting Virology (an early version of VCT)</strong><br>
+</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="dashboard-public_files/embedded_images/o1_VCT.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
 </figure>
 </div>
-<p>o1 (post-mitigation) performs 18% better than 4o.</p></li>
+<p>The models are evaluated on a set of 350 questions from SecureBio about troubleshooting wet lab experiments. Notably, they used the multiple-choice format of VCT, as well as an earlier version of the benchmark.</p>
+<p>o1 (post-mitigation) performs 18% better than GPT-4o.</p></li>
 <li><p><strong>ProtocolQA Open-Ended</strong><br>
-The models are evaluated on a modification of FutureHouse’s ProtocolQA dataset, whereby questions are open-ended short questions that have errors in common published wet lab procedures and ask about how to fix the procedure. 19 PhD experts provide a baseline. Here are the results:</p>
+</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="dashboard-public_files/embedded_images/o1_ProtocolQA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
-<p>All o1 variants outperform 4o but underperform the consensus (57%) and median (42%) expert human baseline.</p></li>
+<p>The models are evaluated on a modification of FutureHouse’s ProtocolQA dataset, whereby questions are open-ended short questions that have errors in common published wet lab procedures and ask about how to fix the procedure. 19 PhD experts provide a baseline.</p>
+<p>All o1 variants outperform GPT-4o but underperform the consensus (57%) and median (42%) expert human baseline.</p></li>
 <li><p><strong>BioLP-Bench</strong><br>
-The models are evaluated on BioLP, a benchmark similar to ProtocolQA Open-Ended.</p>
+</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="dashboard-public_files/embedded_images/o1_BioLP.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
-<p>All o1 variants outperform 4o but slightly underperform the average human expert baseline (38.4%).</p></li>
+<p>The models are evaluated on BioLP, a benchmark similar to ProtocolQA Open-Ended.</p>
+<p>All o1 variants outperform GPT-4o but slightly underperform the average human expert baseline (38.4%).</p></li>
 <li><p><strong>Tacit knowledge and troubleshooting</strong><br>
-Models are evaluated on a multiple choice dataset, created in collaboration with Gryphon Scientific, that contains niche questions that require people answering to have talked to the authors of relevant papers or to have tried the protocol themselves. Here are the results:</p>
+</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="dashboard-public_files/embedded_images/o1_biorisk_tacit.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
+<p>Models are evaluated on a multiple choice dataset, created in collaboration with Gryphon Scientific, that contains niche questions that require people answering to have talked to the authors of relevant papers or to have tried the protocol themselves.</p>
 <p>Models outperformed the median expert baseline of 57%, but no model outperformed the consensus expert baseline of 80%.</p></li>
 <li><p><strong>Tacit knowledge brainstorm (open-ended)</strong><br>
-These 50 questions are similar to the “Tacit knowledge and troubleshooting” from above but are open-ended now instead of multiple choice. Here are the results:</p>
+</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="dashboard-public_files/embedded_images/o1_tacit_brainstorm.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
-<p>All o1 variants outperform 4o. Human baseline was not tested.</p></li>
+<p>These 50 questions are similar to the “Tacit knowledge and troubleshooting” from above but are open-ended now instead of multiple choice.</p>
+<p>All o1 variants outperform GPT-4o. A human baseline was not established.</p></li>
 <li><p><strong>Structured expert probing campaign – chem-bio novel design</strong><br>
 OpenAI worked with Signature Science to design scenarios that test whether the model could assist in creating novel chem-bio threats. Over 34 scenarios with o1 (pre-mitigation), 22 were rated Medium risk and 12 were rated Low risk, none High or Critical. Experts found that o1 could effectively synthesize published literature on modifying and creating novel threats but did not help in uplifting beyond that.</p></li>
 </ol>
@@ -1840,6 +1826,28 @@ In this evaluation, seven human biology experts answered the long-form biorisk q
 This evaluation was listed under the 10 evaluations conducted, but no description was provided in the o3-mini system card.</p></li>
 </ol>
 <p>Again, like for o1, OpenAI ran contextual evaluations on o3-mini, including GPQA biology, WMDP biology and chemistry, an organic chemistry molecular structure dataset, and a synthetic biology translation dataset.</p>
+</section>
+<section id="o3-and-o4-mini" class="level3">
+<h3 class="anchored" data-anchor-id="o3-and-o4-mini"><a href="https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf">o3 and o4-mini</a></h3>
+<p>OpenAI found that o3 and o4-mini can help experts with the operational planning of reproducing a known biological threat. OpenAI believes that their biology evaluations indicate models are close to being able to help novices create known biological threats, crossing the high risk threshold defined in the Preparedness Framework. OpenAI focuses more on biological risks than chemical risks.</p>
+<p>4 different chemical/biological evaluations were run on o3 and o4-mini. For information on the evaluations themselves, look at the section below on the o1 model:</p>
+<ol type="1">
+<li>Long-form Biological Risk Questions<br>
+<img src="dashboard-public_files/embedded_images/o3_o4mini_biothreat_long-form.png" class="img-fluid"><br>
+The helpful-only models (internal testing model that is trained to respond to prompts even if they are unsafe) seem to be able to synthesize biorisk-related information across all 5 steps of the biothreat creation process.<br>
+</li>
+<li>Multimodal Troubleshooting Virology<br>
+<img src="dashboard-public_files/embedded_images/o3_o4mini_VCT.png" class="img-fluid"><br>
+Models were evaluated in the single select multiple choice setting; all models perform above the average human baseline of 40%.<br>
+</li>
+<li>ProtocolQA Open-Ended<br>
+<img src="dashboard-public_files/embedded_images/o3_o4mini_ProtocolQA.png" class="img-fluid"><br>
+All o3 and o4-mini models underperform the consensus expert baseline of 54%. O3 browsing helpful-only is the only model that outperforms the median expert baseline of 42%. OpenAI believes that there might be a risk of benchmark contamination.<br>
+</li>
+<li>Tacit Knowledge and Troubleshooting<br>
+<img src="dashboard-public_files/embedded_images/o3_o4mini_biorisk_tacit.png" class="img-fluid"><br>
+No model outperforms the consensus expert baseline of 80%. All models shown except for o3-mini outperform the 80th percentile PhD expert baseline of 63%.</li>
+</ol>
 </section>
 </div>
 <div id="tabset-2-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-7-tab">
