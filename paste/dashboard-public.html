@@ -11,7 +11,7 @@
 <meta name="author" content="Evan Seeyave">
 <meta name="author" content="Alex Pandya">
 <meta name="author" content="Seth Donoughe">
-<meta name="dcterms.date" content="2025-06-25">
+<meta name="dcterms.date" content="2025-07-10">
 
 <title>Biology Benchmarks Dashboard</title>
 <style>
@@ -78,7 +78,10 @@ div.csl-indent {
   <li><a href="#evaluation-results" id="toc-evaluation-results" class="nav-link" data-scroll-target="#evaluation-results">Evaluation results</a>
   <ul class="collapse">
   <li><a href="#frontier-performance" id="toc-frontier-performance" class="nav-link" data-scroll-target="#frontier-performance">Frontier performance</a></li>
-  <li><a href="#individual-benchmark-results" id="toc-individual-benchmark-results" class="nav-link" data-scroll-target="#individual-benchmark-results">Individual benchmark results</a></li>
+  <li><a href="#individual-benchmark-results" id="toc-individual-benchmark-results" class="nav-link" data-scroll-target="#individual-benchmark-results">Individual benchmark results</a>
+  <ul class="collapse">
+  <li><a href="#interactive-example" id="toc-interactive-example" class="nav-link" data-scroll-target="#interactive-example">Interactive Example</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#biosecurity-evaluations-on-model-cards" id="toc-biosecurity-evaluations-on-model-cards" class="nav-link" data-scroll-target="#biosecurity-evaluations-on-model-cards">Biosecurity evaluations on model cards</a></li>
   <li><a href="#faq" id="toc-faq" class="nav-link" data-scroll-target="#faq">FAQ</a></li>
@@ -146,7 +149,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 25, 2025</p>
+      <p class="date">July 10, 2025</p>
     </div>
   </div>
   
@@ -252,7 +255,7 @@ WIP draft
 <h2 class="anchored" data-anchor-id="frontier-performance">Frontier performance</h2>
 <div class="column-page">
 <div id="cell-frontier-performance" class="cell" data-execution_count="2">
-<div id="frontier-performance" class="cell-output cell-output-display" data-execution_count="2">
+<div id="frontier-performance" class="cell-output cell-output-display" data-execution_count="18">
 
         <iframe width="100%" height="620" src="dashboard-public_files/eval_figures/frontier_progress_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -443,7 +446,7 @@ Unidentified circles in TEM of cells
 </div>
 </div>
 <div id="cell-vct-benchmark-plot" class="cell" data-execution_count="3">
-<div id="vct-benchmark-plot" class="cell-output cell-output-display" data-execution_count="3">
+<div id="vct-benchmark-plot" class="cell-output cell-output-display" data-execution_count="19">
 
         <iframe width="100%" height="620" src="dashboard-public_files/eval_figures/vct_benchmark_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -467,7 +470,7 @@ Limitations of text-only VCT
 </div>
 </div>
 <div id="cell-vct_text-only-benchmark-plot" class="cell" data-execution_count="4">
-<div id="vct_text-only-benchmark-plot" class="cell-output cell-output-display" data-execution_count="4">
+<div id="vct_text-only-benchmark-plot" class="cell-output cell-output-display" data-execution_count="20">
 
         <iframe width="100%" height="620" src="dashboard-public_files/eval_figures/vct-text-only_benchmark_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -536,7 +539,7 @@ HPCT example questions
 </div>
 </div>
 <div id="cell-hpct-benchmark-plot" class="cell" data-execution_count="5">
-<div id="hpct-benchmark-plot" class="cell-output cell-output-display" data-execution_count="5">
+<div id="hpct-benchmark-plot" class="cell-output cell-output-display" data-execution_count="21">
 
         <iframe width="100%" height="620" src="dashboard-public_files/eval_figures/hpct_benchmark_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -605,7 +608,7 @@ MBCT example questions
 </div>
 </div>
 <div id="cell-mbct-benchmark-plot" class="cell" data-execution_count="6">
-<div id="mbct-benchmark-plot" class="cell-output cell-output-display" data-execution_count="6">
+<div id="mbct-benchmark-plot" class="cell-output cell-output-display" data-execution_count="22">
 
         <iframe width="100%" height="620" src="dashboard-public_files/eval_figures/mbct_benchmark_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -674,7 +677,7 @@ WCB example questions
 </div>
 </div>
 <div id="cell-wcb-benchmark-plot" class="cell" data-execution_count="7">
-<div id="wcb-benchmark-plot" class="cell-output cell-output-display" data-execution_count="7">
+<div id="wcb-benchmark-plot" class="cell-output cell-output-display" data-execution_count="23">
 
         <iframe width="100%" height="620" src="dashboard-public_files/eval_figures/wcb_benchmark_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -825,7 +828,7 @@ LB-LitQA2 example questions
 </div>
 </div>
 <div id="cell-litqa2-benchmark-plot" class="cell" data-execution_count="8">
-<div id="litqa2-benchmark-plot" class="cell-output cell-output-display" data-execution_count="8">
+<div id="litqa2-benchmark-plot" class="cell-output cell-output-display" data-execution_count="24">
 
         <iframe width="100%" height="620" src="dashboard-public_files/eval_figures/lb-litqa2_benchmark_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -1007,7 +1010,7 @@ Bacterial Transformation
 </div>
 </div>
 <div id="cell-protocolqa-benchmark-plot" class="cell" data-execution_count="9">
-<div id="protocolqa-benchmark-plot" class="cell-output cell-output-display" data-execution_count="9">
+<div id="protocolqa-benchmark-plot" class="cell-output cell-output-display" data-execution_count="25">
 
         <iframe width="100%" height="620" src="dashboard-public_files/eval_figures/lb-protocolqa_benchmark_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -1098,7 +1101,7 @@ LB-CloningScenarios example questions
 </div>
 </div>
 <div id="cell-cloningscenarios-benchmark-plot" class="cell" data-execution_count="10">
-<div id="cloningscenarios-benchmark-plot" class="cell-output cell-output-display" data-execution_count="10">
+<div id="cloningscenarios-benchmark-plot" class="cell-output cell-output-display" data-execution_count="26">
 
         <iframe width="100%" height="620" src="dashboard-public_files/eval_figures/lb-cloningscenarios_benchmark_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -1190,7 +1193,7 @@ WMDP-bio example questions
 </div>
 </div>
 <div id="cell-wmdp-benchmark-plot" class="cell" data-execution_count="11">
-<div id="wmdp-benchmark-plot" class="cell-output cell-output-display" data-execution_count="11">
+<div id="wmdp-benchmark-plot" class="cell-output cell-output-display" data-execution_count="27">
 
         <iframe width="100%" height="620" src="dashboard-public_files/eval_figures/wmdp-bio_benchmark_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -1316,7 +1319,7 @@ MMLU-bio example questions
 </div>
 </div>
 <div id="cell-mmlu-benchmark-plot" class="cell" data-execution_count="12">
-<div id="mmlu-benchmark-plot" class="cell-output cell-output-display" data-execution_count="12">
+<div id="mmlu-benchmark-plot" class="cell-output cell-output-display" data-execution_count="28">
 
         <iframe width="100%" height="620" src="dashboard-public_files/eval_figures/mmlu-bio_benchmark_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -1401,7 +1404,7 @@ GPQA-bio example questions
 </div>
 </div>
 <div id="cell-gpqa-benchmark-plot" class="cell" data-execution_count="13">
-<div id="gpqa-benchmark-plot" class="cell-output cell-output-display" data-execution_count="13">
+<div id="gpqa-benchmark-plot" class="cell-output cell-output-display" data-execution_count="29">
 
         <iframe width="100%" height="620" src="dashboard-public_files/eval_figures/gpqa-bio_benchmark_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -1542,7 +1545,7 @@ Percutaneous ethanol injection for benign cystic thyroid nodules: is aspiration 
 </div>
 </div>
 <div id="cell-pubmedqa-benchmark-plot" class="cell" data-execution_count="14">
-<div id="pubmedqa-benchmark-plot" class="cell-output cell-output-display" data-execution_count="14">
+<div id="pubmedqa-benchmark-plot" class="cell-output cell-output-display" data-execution_count="30">
 
         <iframe width="100%" height="620" src="dashboard-public_files/eval_figures/pubmedqa_benchmark_plot.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -1566,7 +1569,7 @@ WIP-only! Model-Benchmark Matrix
 </div>
 </div>
 <div id="cell-model-benchmark-table" class="cell" data-execution_count="15">
-<div id="model-benchmark-table" class="cell-output cell-output-display" data-execution_count="15">
+<div id="model-benchmark-table" class="cell-output cell-output-display" data-execution_count="31">
 
         <iframe width="100%" height="650" src="dashboard-public_files/eval_figures/model_benchmark_table.html" frameborder="0" allowfullscreen=""></iframe>
         
@@ -1577,7 +1580,18 @@ WIP-only! Model-Benchmark Matrix
 </div>
 </div>
 </div>
+<section id="interactive-example" class="level3">
+<h3 class="anchored" data-anchor-id="interactive-example">Interactive Example</h3>
+<div id="cell-interactive-sideplot-demo" class="cell" data-execution_count="16">
+<div id="interactive-sideplot-demo" class="cell-output cell-output-display" data-execution_count="32">
+
+        <iframe width="950" height="520" src="dashboard-private_files/eval_figures/interactive_demo.html" frameborder="0" allowfullscreen=""></iframe>
+        
+<p>Interactive scatter plot example - click points to see detailed information</p>
+</div>
+</div>
 <hr>
+</section>
 </section>
 </section>
 <section id="biosecurity-evaluations-on-model-cards" class="level1">
